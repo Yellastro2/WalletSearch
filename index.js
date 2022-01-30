@@ -51,8 +51,8 @@ async function check(){
   }));
 }
   count++; 
-});
-  });
+}).catch((reas)=> console.log(reas))
+  }).catch((reas)=> console.log(reas));
   } 
 }
 
