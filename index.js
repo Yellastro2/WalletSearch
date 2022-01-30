@@ -27,7 +27,7 @@ async function check(){
       await delay(50);
   
   const keyPair = nacl.sign.keyPair(); // create new random key pair 
- console.log('gener new key: '+JSON.stringify(keyPair));
+//console.log('gener new key: '+JSON.stringify(keyPair));
   let wallet = tonweb.wallet.create({publicKey: keyPair.publicKey, wc: 0}); // create interface to wallet smart contract (wallet v3 by default)
   promcount++;
   wallet.getAddress().then((adress)=> {
