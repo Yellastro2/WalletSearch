@@ -20,7 +20,7 @@ var count = 0;
 async function check(){
   
   
- //while(true)
+ while(true)
   {
     await delay(50);
     while(promcount>100)
