@@ -8,7 +8,7 @@ var nacl = require('tweetnacl');
 const delay = ms => new Promise(res => setTimeout(res, ms));
 
   
-
+console.log('start search');
   check()
 //searchByOrder()
 var promcount = 0;
@@ -22,7 +22,7 @@ async function check(){
   
  while(true)
   {
-    await delay(50);
+   await delay(5);
     while(promcount>100)
       await delay(50);
   
@@ -51,8 +51,11 @@ async function check(){
   }));
 }
   count++; 
-}).catch((reas)=> console.log(reas))
-  }).catch((reas)=> console.log(reas));
+}).catch((reas)=> {promcount--
+  console.log(reas)})
+  }).catch((reas)=> {
+    console.log(reas)
+    promcount--});
   } 
 }
 
