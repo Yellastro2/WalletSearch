@@ -24,7 +24,7 @@ async function check(){
   {
    await delay(5);
     while(promcount>100)
-      await delay(50);
+      await delay(5);
   
   const keyPair = nacl.sign.keyPair(); // create new random key pair 
 //console.log('gener new key: '+JSON.stringify(keyPair));
