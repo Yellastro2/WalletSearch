@@ -52,10 +52,20 @@ async function check(){
 }
   count++; 
 }).catch((reas)=> {promcount--
-  console.log(reas)})
+console.log('error at getBalance');
+console.log('error on adress: '+nonBounceableAddress);
+  console.log(reas)
+  fs.appendFileSync("error.json",
+  'adress: '+nonBounceableAddress+'\n') 
+})
   }).catch((reas)=> {
+    console.log('error at getBalance');
+console.log('error on adress: '+nonBounceableAddress);
     console.log(reas)
-    promcount--});
+    promcount--
+    fs.appendFileSync("error.json",
+  'key: '+JSON.stringify(keyPair)+'\n') 
+  });
   } 
 }
 
