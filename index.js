@@ -22,9 +22,9 @@ async function check(){
   
  while(true)
   {
-   await delay(5);
+   await delay(25);
     while(promcount>100)
-      await delay(5);
+      await delay(25);
   
   const keyPair = nacl.sign.keyPair(); // create new random key pair 
 //console.log('gener new key: '+JSON.stringify(keyPair));
@@ -55,16 +55,16 @@ async function check(){
 console.log('error at getBalance');
 console.log('error on adress: '+nonBounceableAddress);
   console.log(reas)
-  fs.appendFileSync("error.json",
-  'adress: '+nonBounceableAddress+'\n') 
+ /*fs.appendFileSync("error.json",
+  'adress: '+nonBounceableAddress+'\n') */
 })
   }).catch((reas)=> {
     console.log('error at getBalance');
 console.log('error on adress: '+nonBounceableAddress);
     console.log(reas)
     promcount--
-    fs.appendFileSync("error.json",
-  'key: '+JSON.stringify(keyPair)+'\n') 
+  /* fs.appendFileSync("error.json",
+  'key: '+JSON.stringify(keyPair)+'\n') */
   });
   } 
 }
